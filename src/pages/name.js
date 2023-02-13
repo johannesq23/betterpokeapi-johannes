@@ -3,13 +3,14 @@ import useSWR from 'swr'
 import Link from 'next/link'
 
 const fetcher = async (url) => {
+    console.log(url)
     const res = await axios.get(url)
     console.log(res.data)
     return res.data
 }
 
 export default function Name() {
-    let { data, error, isLoading, isValidating } = useSWR("/api/pokemon/pikachu", fetcher)
+    let { data, error, isLoading, isValidating } = useSWR("/api/pokemon/dragonite", fetcher)
 
     if (isLoading) return <div>Loading</div>
     if (!data) return (
@@ -18,9 +19,8 @@ export default function Name() {
             <h2>Must Implement your API. Data is empty</h2>
         </>
     )
-
     let { pokemonName, sprite, types } = data
-
+    
 
     return (
         <>

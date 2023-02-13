@@ -6,8 +6,14 @@ export default async function handler(req, res) {
     let response
     try{
       response = await axios.get(site)
-      const { name } = response.data
-      res.status(200).json({name: response.data.name})
+      let { name, sprites, types } = response.data
+      let sprite = sprites.front_default
+      let typeNames = []
+      types.forEach(element => {
+        typeNames.push(element.type.name)
+      })
+      types = typeNames
+      return res.status(200).json({name, sprite, types})
     } catch (error) {
       console.log("error")
       res.status(200).json({ name: "error" })
