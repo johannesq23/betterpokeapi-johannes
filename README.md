@@ -5,7 +5,7 @@ Create a backend that abstracts some aspects and combines features of the PokeAP
 
 ## Submission
 - Send the link to the repo containing your code in the #gt-bootcamp-dev Slack channel (there will be a thread for this later)
-- Create a > 3 minute video walkthrough of your API
+- Create a less than 3 minute video walkthrough of your API
 
 ## Requirements
 - Must accurately represent the demo
@@ -21,7 +21,7 @@ All API endpoints should exist in the `pages/api` folder of your Next.js project
 ```http
 GET /
 ```
-- returns the name, sprite, and typeo of random Pokemon
+- returns the name, sprite, and type of random Pokemon
 
 ```http
 GET /pokemon/:name
@@ -55,7 +55,7 @@ POST /battle
 ```http
 POST /catch
 ```
-- Returns whether a Pokemon is caught based on the its HP. Assume that the a regular Poke Ball is used. Assume that the capture method follows the algorithms in Generation I.
+- Returns whether a Pokemon is caught based on the its HP. Assume that a regular Poke Ball is used. Assume that the capture method follows the algorithms in Generation I.
 - Capture Algorithm (Generation I)
 	- Generate a random integer between $[1, 255]$ called $N$
 	- Generate a random integer between $[1, 255]$ called $BALL$
@@ -66,6 +66,19 @@ POST /catch
 - Body of the request
 	- `pokemon` - name of the pokemon (String)
 - Challenge (Optional): Allow for different Poke Ball types to be sent in the body of the request. Use the capture algorithm for a different Generation (see [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Catch_rate))
+
+## Testing
+The frontend part of the application has hard-coded test cases just to allow you to get a general sense of how your API should be built. I recommend testing and debugging your API with the tool Postman that I had everyone download. 
+
+Also, if you are wondering what response should be returned, pay close attention to how the frontend code is written. For instance, if I destructure a variable `types` from the data object like so:
+```js
+let { types } = data 
+```
+The JSON response should contain the key `types`. If I then map over the variable `types` like so:
+```jsx
+types.map(type => <span>{type}</span>)
+```
+Then, your API implementation should return `types` as an array of strings. 
 
 ## Go above & beyond
 - Feel free to edit and enhance the UI (though the overall layout of the app should align with the requirements)
