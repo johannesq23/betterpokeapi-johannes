@@ -10,6 +10,8 @@ const fetcher = async (url) => {
 }
 
 export default function Name() {
+
+    
     let { data, error, isLoading, isValidating } = useSWR("/api/pokemon/dragonite", fetcher)
 
     if (isLoading) return <div>Loading</div>
@@ -28,7 +30,15 @@ export default function Name() {
             {isValidating ? (
                 <h2>Validating</h2>
             ) : (
+                
                 <>
+                <form> 
+                    <label>
+                        Enter pokemon name:
+                        <input type = "text" name = "name"/>
+                    </label>
+                    <input type = "submit" value = "Submit"/>
+                </form>
                     <h2>Name: {pokemonName}</h2>
                     <img src={sprite} />
                     <h2>Types: {types.map(type => <span>{type} </span>)}</h2>
