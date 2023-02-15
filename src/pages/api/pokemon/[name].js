@@ -19,6 +19,6 @@ export default async function handler(req, res) {
     site =  "https://pokeapi.co/api/v2/pokemon/" + Math.floor(Math.random()*1008 + 1)
     response = await axios.get(site)
     console.log("error")
-    return res.json(response.data.name)
+    return res.json()
   } 
 }
