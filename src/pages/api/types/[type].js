@@ -14,10 +14,10 @@ export default async function handler(req, res) {
             names.push(element.pokemon.name)
         })
         pokemon = names
-        return res.json({pokemon})
+        return res.status(200).json({pokemon})
         
     } catch (error) {
         console.log("error")
-        res.status(200).json()
+        res.status(400).json()
     } 
 }

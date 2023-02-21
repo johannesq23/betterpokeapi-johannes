@@ -15,10 +15,10 @@ export default async function handler(req, res) {
     let experience = levels[currentLevel - 1].experience
 
 
-    return res.json({experience})
+    return res.status(200).json({experience})
 
   } catch (error) {
     console.log("error")
-    return res.json({})
+    return res.status(400).json({})
   } 
 }

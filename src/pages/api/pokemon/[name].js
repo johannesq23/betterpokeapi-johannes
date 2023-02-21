@@ -14,11 +14,11 @@ export default async function handler(req, res) {
       typeNames.push(element.type.name)
     })
     types = typeNames
-    return res.json({pokemonName, sprite, types})
+    return res.status(200).json({pokemonName, sprite, types})
   } catch (error) {
     site =  "https://pokeapi.co/api/v2/pokemon/" + Math.floor(Math.random()*1008 + 1)
     response = await axios.get(site)
     console.log("error")
-    return res.json()
+    return res.status(400).json()
   } 
 }

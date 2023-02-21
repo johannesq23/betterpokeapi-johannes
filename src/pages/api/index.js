@@ -16,7 +16,7 @@ export default async function handler(req, res) {
       return res.status(200).json({name, sprite, types})
     } catch (error) {
       console.log("error")
-      res.status(200).json({ name: "error" })
+      res.status(400).json({ name: "error" })
     }
     
   }

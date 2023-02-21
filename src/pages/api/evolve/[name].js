@@ -26,10 +26,10 @@ export default async function handler(req, res) {
     
     let evolution = eChain[Math.min(index + 1, eChain.length - 1)]
     
-    return res.json({evolution})
+    return res.status(200).json({evolution})
 
   } catch (error) {
     console.log("error")
-    return res.json()
+    return res.status(400).json()
   } 
 }

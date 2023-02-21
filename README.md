@@ -84,5 +84,6 @@ Then, your API implementation should return `types` as an array of strings.
 ## Go above & beyond
 - Feel free to edit and enhance the UI (though the overall layout of the app should align with the requirements)
 
+DEMO LINK: https://drive.google.com/file/d/1syH7bSU7L0U9dCETuktcooxxxm76_JQR/view?usp=sharing
 
 
