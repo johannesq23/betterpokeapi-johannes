@@ -31,7 +31,9 @@ export default function Evolve() {
 
     return (
         <>
-            <Link href="/"><h1>Better PokeAPI</h1></Link>
+            <div className = "headers">
+                <Link href="/"><h1>Better PokeAPI</h1></Link>
+            </div>
             <form> 
                 <label>
                     Enter pokemon name:

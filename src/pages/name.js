@@ -33,7 +33,9 @@ export default function Name() {
 
     return (
         <>
-            <h1><Link href="/">Better PokeAPI</Link></h1>
+            <div className = "headers">
+                <Link href="/"><h1>Better PokeAPI</h1></Link>
+            </div>
             {isValidating ? (
                 <h2>Validating</h2>
             ) : (

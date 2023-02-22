@@ -22,7 +22,9 @@ export default function Exp() {
 
     return (
         <>
-            <Link href="/"><h1>Better PokeAPI</h1></Link>
+            <div className = "headers">
+                <Link href="/"><h1>Better PokeAPI</h1></Link>
+            </div>
             <h2>Name: {name}</h2>
             <h2>Level: {level}</h2>
             {isValidating ? (

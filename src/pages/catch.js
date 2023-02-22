@@ -23,7 +23,9 @@ export default function Battle() {
 
     return (
         <>
-            <Link href="/"><h1>Better PokeAPI</h1></Link>
+            <div className = "headers">
+                <Link href="/"><h1>Better PokeAPI</h1></Link>
+            </div>
             <h2>Catching: {name}</h2>
 
             {isValidating ? (

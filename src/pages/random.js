@@ -21,7 +21,9 @@ export default function Random() {
 
     return (
         <>
-            <Link href="/"><h1>Better PokeAPI</h1></Link>
+            <div className = "headers">
+                <Link href="/"><h1>Better PokeAPI</h1></Link>
+            </div>
             {isValidating ? (
                 <h2>Validating</h2>
             ) : (

@@ -1,6 +1,31 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #E0E1E9;
+
+
 }
+
+.headers {
+    background-color: #DC6ACF;
+}
+
+.links {
+    position: absolute;
+    left: 10px;
+    display: block;
+    padding: 10px 10px 20px;
+    max-width: 300px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 3px solid #F7D6E0;
+    background-color: #F5B0CB;
+    transition-duration: 1s;  
+}
+
+.links:hover {
+    left: 100px;
+}
+
 a {
     display: block;
     padding: 10px 10px 20px;
